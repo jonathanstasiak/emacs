@@ -1,14 +1,14 @@
 ;; others
 (load "defunkt/dired")
-(load "defunkt/ruby")
+;(load "defunkt/ruby")
 (load "defunkt/shell")
-(load "defunkt/javascript")
+;(load "defunkt/javascript")
 (load "defunkt/erlang")
-(load "defunkt/python")
+;(load "defunkt/python")
 (load "defunkt/sgml")
 (load "defunkt/erc")
-(load "defunkt/artist")
-(load "defunkt/coffee")
+;(load "defunkt/artist")
+;(load "defunkt/coffee")
 (load "defunkt/markdown")
 (load "defunkt/css")
 
@@ -64,9 +64,9 @@
              (define-key c-mode-map "{" 'defunkt/c-electric-brace)))
 
 ;; mustache
-(add-to-list 'auto-mode-alist '("\\.mustache$" . tpl-mode))
+;;(add-to-list 'auto-mode-alist '("\\.mustache$" . tpl-mode))
 
 ;; textmate.el
-(vendor 'textmate)
-(textmate-mode)
-(setq textmate-find-files-command "git ls-tree --full-tree --name-only -r HEAD")
+;;(vendor 'textmate)
+;;(textmate-mode)
+;;(setq textmate-find-files-command "git ls-tree --full-tree --name-only -r HEAD")
