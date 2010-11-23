@@ -1,16 +1,18 @@
 ;; others
 (load "defunkt/dired")
-;(load "defunkt/ruby")
 (load "defunkt/shell")
-;(load "defunkt/javascript")
 (load "defunkt/erlang")
-;(load "defunkt/python")
-(load "defunkt/sgml")
-(load "defunkt/erc")
-;(load "defunkt/artist")
-;(load "defunkt/coffee")
+(load "defunkt/coffee")
 (load "defunkt/markdown")
 (load "defunkt/css")
+(load "defunkt/sgml")
+(load "defunkt/erc")
+;(load "defunkt/ruby")
+; using js2.el
+;(load "defunkt/javascript")
+; using python-mode
+;(load "defunkt/python")
+;(load "defunkt/artist")
 
 ;; all modes
 (add-hook 'before-save-hook 'delete-trailing-whitespace)

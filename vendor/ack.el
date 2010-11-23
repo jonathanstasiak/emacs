@@ -24,6 +24,7 @@
 
 ;;; Commentary:
 
+
 ;; ack.el provides a simple compilation mode for the perl grep-a-like
 ;; ack (http://petdance.com/ack/).
 
@@ -82,7 +83,7 @@ in the --type argument to the ack command")
                                nil
                                nil
                                'ack-history)))
-  (compilation-start (concat command-args " " (textmate-project-root)) 
+  (compilation-start (concat command-args " " (textmate-project-root))
                      'ack-mode))
 
 (provide 'ack)

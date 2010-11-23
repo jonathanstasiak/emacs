@@ -28,7 +28,6 @@
 (add-hook 'js2-mode-hook
           (lambda () (flymake-mode t)))
 
-
 ;;auto-complete
 (vendor 'auto-complete)
 (global-auto-complete-mode t)
@@ -54,4 +53,11 @@
     (flymake-display-err-menu-for-current-line)
 )
 (global-set-key (kbd "C-c SPC") 'my-flymake-show-next-error)
+
+;; rst mode
+(require 'rst)
+
+;; dvc mode
+(add-to-list 'load-path "~/.emacs.d/vendor/dvc/lisp/")
+(require 'dvc-autoloads)
 
