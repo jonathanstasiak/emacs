@@ -32,6 +32,10 @@
 (vendor 'auto-complete)
 (global-auto-complete-mode t)
 
+;;coffee-mode
+(vendor 'coffee-mode)
+(add-to-list 'auto-mode-alist '("\\.coffee\\'" . coffee-mode))
+
 (vendor 'yasnippet)
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/snippets")
@@ -43,8 +47,8 @@
 (autoload 'python-pylint "python-pylint")
 (autoload 'pylint "python-pylint")
 
-(autoload 'css-complete "css-complete")
-(autoload 'css-check "css-check")
+;(autoload 'css-complete "css-complete")
+;(autoload 'css-check "css-check")
 
 ;; flymake shortcut
 (defun my-flymake-show-next-error()
