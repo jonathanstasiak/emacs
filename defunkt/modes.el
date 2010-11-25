@@ -4,9 +4,9 @@
 (load "defunkt/erlang")
 (load "defunkt/coffee")
 (load "defunkt/markdown")
-(load "defunkt/css")
 (load "defunkt/sgml")
 (load "defunkt/erc")
+;(load "defunkt/css")
 ;(load "defunkt/ruby")
 ; using js2.el
 ;(load "defunkt/javascript")

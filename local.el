@@ -1,6 +1,5 @@
-(load "defunkt")
-
 (add-to-list 'exec-path "/usr/local/bin")
+(load "defunkt")
 
 ;; cocoa bindings
 (setq mac-option-key-meta nil)
@@ -28,28 +27,6 @@
 (add-hook 'js2-mode-hook
           (lambda () (flymake-mode t)))
 
-;;auto-complete
-(vendor 'auto-complete)
-(global-auto-complete-mode t)
-
-;;coffee-mode
-(vendor 'coffee-mode)
-(add-to-list 'auto-mode-alist '("\\.coffee\\'" . coffee-mode))
-
-(vendor 'yasnippet)
-(yas/initialize)
-(yas/load-directory "~/.emacs.d/snippets")
-
-;;(vendor 'python-mode)
-(load-library "init_python")
-(autoload 'python-pep8 "python-pep8")
-(autoload 'pep8 "python-pep8")
-(autoload 'python-pylint "python-pylint")
-(autoload 'pylint "python-pylint")
-
-;(autoload 'css-complete "css-complete")
-;(autoload 'css-check "css-check")
-
 ;; flymake shortcut
 (defun my-flymake-show-next-error()
     (interactive)
@@ -58,6 +35,28 @@
 )
 (global-set-key (kbd "C-c SPC") 'my-flymake-show-next-error)
 
+;;coffee-mode
+(vendor 'coffee-mode)
+(add-to-list 'auto-mode-alist '("\\.coffee\\'" . coffee-mode))
+
+;; yas
+(vendor 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/snippets")
+
+;;auto-complete
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/ac-dict")
+(ac-config-default)
+(defun ac-css-mode-setup())
+
+;;(vendor 'python-mode)
+(load-library "init_python")
+(autoload 'python-pep8 "python-pep8")
+(autoload 'pep8 "python-pep8")
+(autoload 'python-pylint "python-pylint")
+(autoload 'pylint "python-pylint")
+
 ;; rst mode
 (require 'rst)
 
@@ -65,3 +64,9 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/dvc/lisp/")
 (require 'dvc-autoloads)
 
+;; css-mode
+(add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
+(autoload 'css-mode "css-mode" nil t)
+
+;; random file bindings
+(add-to-list 'auto-mode-alist '("\\.tmpl$" . html-mode))
